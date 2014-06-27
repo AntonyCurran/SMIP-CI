@@ -8,5 +8,29 @@
         <members>*</members>
         <name>ApexPage</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Contact</members>
+        <members>Contract</members>
+        <members>Opportunity</members>
+        <members>Order</members>
+        <members>OrderItem</members>
+        <members>Pricebook2</members>
+        <members>Product2</members>
+        <members>User</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
     <version>30.0</version>
 </Package>
