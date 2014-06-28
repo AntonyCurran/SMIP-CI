@@ -2,10 +2,6 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>ApexPage</name>
     </types>
     <types>
@@ -13,15 +9,11 @@
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>Account</members>
-        <members>Contact</members>
-        <members>Contract</members>
-        <members>Opportunity</members>
-        <members>Order</members>
-        <members>OrderItem</members>
-        <members>Pricebook2</members>
-        <members>Product2</members>
-        <members>User</members>
+        <members>Smart_Meters</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -30,6 +22,7 @@
     </types>
     <types>
         <members>Admin</members>
+        <members>Admin Manager Service User</members>
         <name>Profile</name>
     </types>
     <version>30.0</version>

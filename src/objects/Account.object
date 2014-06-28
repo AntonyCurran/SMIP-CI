@@ -147,6 +147,23 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Forecast_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Forecast_Start_Date__c + 365 *2</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Forecast End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Forecast_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Forecast Start Date</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>Industry</fullName>
         <picklist>
             <picklistValues>

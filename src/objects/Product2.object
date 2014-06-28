@@ -45,13 +45,39 @@
     <fields>
         <fullName>Family</fullName>
         <picklist>
+            <picklistValues>
+                <fullName>Communication Hubs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Catalogue Items</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auxiliary Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <type>Picklist</type>
     </fields>
+    <fields>
+        <fullName>Smart_Meter_Forecast__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Select if this product is to be forecast as part of the Smart Meter System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select if this product is to be forecast as part of the Smart Meter System</inlineHelpText>
+        <label>Smart Meter Forecast</label>
+        <type>Checkbox</type>
+    </fields>
     <listViews>
         <fullName>AllProducts</fullName>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.FAMILY</field>
+            <operation>equals</operation>
+            <value>Communication Hubs,Catalogue Items,Auxiliary Equipment</value>
+        </filters>
         <label>All Products</label>
     </listViews>
     <searchLayouts>
