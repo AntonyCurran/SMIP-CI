@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
-        <name>ApexPage</name>
+        <members>DeliveryScheduleExtension</members>
+        <members>DeliveryScheduleExtensionTest</members>
+        <name>ApexClass</name>
     </types>
     <types>
         <members>*</members>
-        <name>ApexTrigger</name>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
     </types>
     <types>
         <members>Smart_Meters</members>
@@ -14,6 +19,13 @@
     </types>
     <types>
         <members>*</members>
+        <members>Account</members>
+        <members>Contact</members>
+        <members>Order</members>
+        <members>OrderItem</members>
+        <members>Pricebook2</members>
+        <members>Product2</members>
+        <members>User</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -21,8 +33,29 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Group</name>
+    </types>
+    <types>
+        <members>Account-Account %28Marketing%29 Layout</members>
+        <members>Account-Account %28Sales%29 Layout</members>
+        <members>Account-Account %28Support%29 Layout</members>
+        <members>Account-Account Layout</members>
+        <members>Delivery_Location__c-Delivery Location Layout</members>
+        <members>Delivery_Schedule__c-Delivery Schedule Layout</members>
+        <members>Energy_Supplier_Forecast__c-Energy Supplier Forecast Layout</members>
+        <members>Order-Order Layout</members>
+        <members>OrderItem-Order Product Layout</members>
+        <members>Pricebook2-Price Book Layout</members>
+        <members>Product2-Product Layout</members>
+        <members>Region__c-Region Layout</members>
+        <members>User-User Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
         <members>Admin</members>
         <members>Admin Manager Service User</members>
+        <members>Energy Supplier</members>
         <name>Profile</name>
     </types>
     <version>30.0</version>

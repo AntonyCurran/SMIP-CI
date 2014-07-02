@@ -91,8 +91,76 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Delivery_Schedule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Consignment orders belong to a delivery schedule</description>
+        <externalId>false</externalId>
+        <label>Delivery Schedule</label>
+        <referenceTo>Delivery_Schedule__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(MONTH( DateValue(now()) ), 
+1, &quot;January&quot;, 
+2, &quot;February&quot;, 
+3, &quot;March&quot;, 
+4, &quot;April&quot;, 
+5, &quot;May&quot;, 
+6, &quot;June&quot;, 
+7, &quot;July&quot;, 
+8, &quot;August&quot;, 
+9, &quot;September&quot;, 
+10, &quot;October&quot;, 
+11, &quot;November&quot;, 
+12, &quot;December&quot;, 
+&quot;None&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Related Opportunity</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>OriginalOrderId</fullName>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <picklist>
+            <picklistValues>
+                <fullName>South</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>ShipToContactId</fullName>
@@ -110,18 +178,6 @@
                 <fullName>Activated</fullName>
                 <default>false</default>
             </picklistValues>
-            <picklistValues>
-                <fullName>New</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Submitted</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>newer</fullName>
-                <default>false</default>
-            </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
@@ -131,10 +187,25 @@
     <fields>
         <fullName>Type</fullName>
         <picklist>
+            <picklistValues>
+                <fullName>Consignment</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <trackHistory>true</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text( Year(DateValue(now())) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllActivatedOrders</fullName>
@@ -158,14 +229,38 @@
     </listViews>
     <listViews>
         <fullName>AllOrders</fullName>
+        <columns>ORDERS.ORDER_NUMBER</columns>
+        <columns>ORDERS.STATUS</columns>
+        <columns>Month__c</columns>
+        <columns>ORDERS.LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <label>All Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>Energy_Supplier_Orders</fullName>
+        <columns>ORDERS.ORDER_NUMBER</columns>
+        <columns>ORDERS.STATUS</columns>
+        <columns>Month__c</columns>
+        <columns>ORDERS.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Energy Supplier Orders</label>
     </listViews>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
         <fullName>Auxiliary_Equipment_Order</fullName>
         <active>true</active>
         <label>Auxiliary Equipment Order</label>
+        <picklistValues>
+            <picklist>Region__c</picklist>
+            <values>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
         <picklistValues>
             <picklist>Status</picklist>
             <values>
@@ -176,12 +271,11 @@
                 <fullName>Draft</fullName>
                 <default>false</default>
             </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
             <values>
-                <fullName>New</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Submitted</fullName>
+                <fullName>Consignment</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -191,6 +285,17 @@
         <active>true</active>
         <label>Catalogue Item Order</label>
         <picklistValues>
+            <picklist>Region__c</picklist>
+            <values>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Status</picklist>
             <values>
                 <fullName>Activated</fullName>
@@ -198,6 +303,13 @@
             </values>
             <values>
                 <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Consignment</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -208,6 +320,17 @@
         <description>Order type of Communication Hub</description>
         <label>Communication Hub Orders</label>
         <picklistValues>
+            <picklist>Region__c</picklist>
+            <values>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Status</picklist>
             <values>
                 <fullName>Activated</fullName>
@@ -215,6 +338,13 @@
             </values>
             <values>
                 <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Consignment</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -230,4 +360,11 @@
         <lookupPhoneDialogsAdditionalFields>CONTRACT.OWNERALIAS</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>ORDERS.ORDER_NUMBER</searchResultsAdditionalFields>
     </searchLayouts>
+    <validationRules>
+        <fullName>Consignments_needs_a_schedule</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(Type, &quot;Consignment&quot;)  &amp;&amp; ISNULL(Delivery_Schedule__c)</errorConditionFormula>
+        <errorDisplayField>Delivery_Schedule__c</errorDisplayField>
+        <errorMessage>A consignment must belong to a delivery schedule</errorMessage>
+    </validationRules>
 </CustomObject>

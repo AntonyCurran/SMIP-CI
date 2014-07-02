@@ -73,11 +73,6 @@
     <listViews>
         <fullName>AllProducts</fullName>
         <filterScope>Everything</filterScope>
-        <filters>
-            <field>PRODUCT2.FAMILY</field>
-            <operation>equals</operation>
-            <value>Communication Hubs,Catalogue Items,Auxiliary Equipment</value>
-        </filters>
         <label>All Products</label>
     </listViews>
     <searchLayouts>

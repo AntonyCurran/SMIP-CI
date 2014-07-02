@@ -1,0 +1,30 @@
+<apex:page standardController="Delivery_Schedule__c" extensions="DeliveryScheduleExtension">
+   <apex:pageBlock title="Create Delivery Schedule">
+       <apex:form >
+           <apex:pageMessages />
+           <apex:PageBlock >
+              <apex:pageBlockButtons title="Actions">
+                 <apex:commandButton value="Save" action="{!save}"/>
+              </apex:pageBlockButtons>
+              <apex:pageBlockSection title="Delivery Schedule">
+                 <apex:inputField value="{!deliverySchedule.Account__c}"/>
+                 <apex:inputField value="{!deliverySchedule.Region__c}"/>                  
+                 <apex:inputField value="{!deliverySchedule.Month__c}"/>
+                 <apex:inputField value="{!deliverySchedule.Year__c}"/>                  
+              </apex:pageBlockSection>
+              <apex:pageBlockSection title="1st Consignment">
+                 <apex:inputField value="{!consignments[0].EffectiveDate}"/>
+              </apex:pageBlockSection>
+              <apex:pageBlockSection title="2nd Consignment">
+                 <apex:inputField value="{!consignments[0].EffectiveDate}"/>
+              </apex:pageBlockSection>
+              <apex:pageBlockSection title="3rd Consignment">
+                 <apex:inputField value="{!consignments[0].EffectiveDate}"/>
+              </apex:pageBlockSection>
+              <apex:pageBlockSection title="4th Consignment">
+                 <apex:inputField value="{!consignments[0].EffectiveDate}"/>
+              </apex:pageBlockSection>
+           </apex:PageBlock>
+       </apex:form>
+   </apex:pageBlock>
+</apex:page>
