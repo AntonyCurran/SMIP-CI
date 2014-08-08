@@ -1,0 +1,280 @@
+<apex:page StandardController="Forecast_Header__c" extensions="MultiAddEnergySupplierForecast" sidebar="false" >
+   <apex:form style="Width:49%">
+        <apex:pageBlock id="blockA" Title="Create Forecast" mode="edit" >
+            <apex:pageMessages />
+            
+            <apex:pageBlockSection >
+                <!--<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Select Account" />
+                    <apex:InputField value="{!listInner[0].esf.Energy_Supplier__c}" rendered="{! !listInner[0].energySuppUser}" />
+                </apex:pageBlockSectionItem>-->
+            </apex:pageBlockSection>
+            
+            <div style="overflow:auto; width:100%; height:100%">
+            
+                <apex:panelGrid columns="26" bgcolor="#BDBDBD" >
+                
+                <apex:panelGrid frame="Box" width="100px">
+                    <apex:facet name="header">Hub Variant</apex:facet>
+                </apex:panelGrid>
+                
+                <apex:panelGrid width="57px" >
+                    <apex:facet name="header"></apex:facet>
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_1__c}</apex:facet>
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px">
+                    <apex:facet name="header">{!listInner[0].esf.Month_2__c}</apex:facet>
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px">
+                    <apex:facet name="header">{!listInner[0].esf.Month_3__c}</apex:facet> 
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_4__c}</apex:facet>
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_5__c}</apex:facet>
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_6__c}</apex:facet>
+                    
+                </apex:panelGrid> 
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_7__c}</apex:facet>
+                   
+                </apex:panelGrid>  
+                
+                 <apex:panelGrid frame="Box" width="102px">
+                    <apex:facet name="header">{!listInner[0].esf.Month_8__c}</apex:facet>
+                   
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_9__c}</apex:facet>
+                    
+                </apex:panelGrid>
+                
+                   <apex:panelGrid frame="Box" width="102px">
+                    <apex:facet name="header">{!listInner[0].esf.Month_10__c}</apex:facet>
+                    
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_11__c}</apex:facet>
+                </apex:panelGrid> 
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_12__c}</apex:facet>
+                </apex:panelGrid>                           
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_13__c}</apex:facet>
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px">
+                    <apex:facet name="header">{!listInner[0].esf.Month_14__c}</apex:facet> 
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px">
+                    <apex:facet name="header">{!listInner[0].esf.Month_15__c}</apex:facet>
+                    
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_16__c}</apex:facet>
+                    
+                </apex:panelGrid>
+                
+                   <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_17__c}</apex:facet>
+                    
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_18__c}</apex:facet>
+                   
+                </apex:panelGrid> 
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_19__c}</apex:facet>
+                    
+                </apex:panelGrid>  
+                
+                 <apex:panelGrid frame="Box" width="102px">
+                    <apex:facet name="header">{!listInner[0].esf.Month_20__c}</apex:facet>
+                    
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_21__c}</apex:facet>
+                    
+                </apex:panelGrid>
+                
+                   <apex:panelGrid frame="Box" width="102px">
+                    <apex:facet name="header">{!listInner[0].esf.Month_22__c}</apex:facet>
+                    
+                </apex:panelGrid>
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_23__c}</apex:facet>
+                    
+                </apex:panelGrid> 
+                
+                <apex:panelGrid frame="Box" width="102px" >
+                    <apex:facet name="header">{!listInner[0].esf.Month_24__c}</apex:facet>
+                    
+                </apex:panelGrid> 
+            </apex:panelgrid>
+        
+        <apex:repeat var="li" value="{!listInner}">
+        <apex:panelGrid columns="26" frame="Box" >
+            
+            <apex:panelGrid width="97px" >
+                <apex:Outputtext value="{!li.hubType}" />
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="57px" frame="lhs" >
+                <apex:OutputText value="Previous" style="width:80px" />
+                <apex:OutputText value="Current" style="width:80px" />
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs" >
+                <apex:OutputField value="{!li.esf.Previous_Month_1__c}" style="width:80px" />
+                <apex:InputField value="{!li.esf.Current_Month_1__c}" style="width:80px" />
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_2__c}" style="width:80px" />
+                <apex:InputField value="{!li.esf.Current_Month_2__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_3__c}" style="width:80px" />
+                <apex:InputField value="{!li.esf.Current_Month_3__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_4__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_4__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_5__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_5__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_6__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_6__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_7__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_7__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_8__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_8__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_9__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_9__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_10__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_10__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_11__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_11__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_12__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_12__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_13__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_13__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_14__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_14__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_15__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_15__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_16__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_16__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_17__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_17__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_18__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_18__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_19__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_19__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_20__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_20__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_21__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_21__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_22__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_22__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_23__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_23__c}" style="width:80px"/>
+            </apex:panelGrid>
+            
+            <apex:panelGrid width="102px" frame="lhs">
+                <apex:OutputField value="{!li.esf.Previous_Month_24__c}" style="width:80px"/>
+                <apex:InputField value="{!li.esf.Current_Month_24__c}" style="width:80px"/>
+            </apex:panelGrid>
+        </apex:panelgrid>
+       
+        </apex:repeat>
+      </div>      
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                <apex:commandButton value="Submit" disabled="true"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

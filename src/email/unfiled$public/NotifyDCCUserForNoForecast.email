@@ -1,0 +1,6 @@
+Dear Supplier,
+
+Forecast for the {!NullValue(User.Kmonth__c, "current")} month has not been submitted.
+
+Regards,
+SMIP

@@ -1,0 +1,41 @@
+<apex:component controller="DeliverySchedulerComponentController" allowDML="true">
+    <apex:attribute name="pageController"
+    type="AbstractParentController"
+        assignTo="{!parentController}"
+        required="true"
+        description="The controller for the page." />
+            
+   <apex:pageMessages />
+           <apex:PageBlock id="pb" >
+               <apex:pageBlockSection title="View Delivery Schedule">
+                  <apex:outputField value="{!wrapper.deliverySchedule.Account__c}"    />
+                   <apex:outputField value="{!wrapper.deliverySchedule.Region__c}"/>                  
+                   <apex:outputField label="Delivery Month" value="{!wrapper.deliverySchedule.Month__c}"/>
+                   <apex:outputField value="{!wrapper.deliverySchedule.Year__c}"/>                  
+              </apex:pageBlockSection>
+              
+               <apex:repeat value="{!wrapper.consignments}" var="consignment" id="consignments"> 
+                   <apex:pageBlockSection title="Consignment {!consignment.Position__c}">
+                       <apex:outputField value="{!consignment.Due__c}"/>
+                       <apex:outputField value="{!consignment.Delivery_Location__c}"/>        
+                       <apex:outputField value="{!consignment.Instructions__c}"/>        
+                       <apex:outputText Label="Status" value="{!consignment.Status__c}  {!consignment.ReceivedOn__c}"/>  
+                       
+                       <apex:pageBlockSection columns="2">
+                           <apex:repeat value="{!wrapper.items[consignment.Position__c]}" var="item">
+                               <apex:outputField value="{!item.Product__c}" />
+                               <apex:outputField value="{!item.Quantity__c}"/>                  
+                           </apex:repeat>
+                        </apex:pageBlockSection>  
+                       <apex:pageBlockSection columns="2">
+                           
+                           <apex:commandButton value="Goods Received"  rendered="{!ManageDeliveryReceivedButton}" reRender="pb" action="{!acknowledgeDelivery}"  id="deliRecevied" disabled="{!consignment.Status__c=='Goods Received'}">
+                               <apex:param name="gotConsignement" value="{!consignment.Id}" assignTo="{!consId}"/>
+                           </apex:commandButton>     
+                       </apex:pageBlockSection>
+                   </apex:pageBlockSection>
+               </apex:repeat> 
+           </apex:PageBlock>
+           <apex:pageMessage summary="Orders cannot be SUBMITTED with the Errors. Please fix the Errors for SUBMIT process." severity="Error" strength="4" rendered="{!hasErrorMessages}" />
+       
+</apex:component>

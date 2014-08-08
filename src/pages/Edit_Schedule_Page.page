@@ -1,0 +1,16 @@
+<apex:page standardController="Delivery_Schedule__c" extensions="EditDeliveryScheduleExtension">
+     <apex:form >
+   <apex:pageBlock title="Edit Delivery Schedule">
+         <apex:pageMessages />
+           <apex:pageBlockButtons >
+               <apex:outputPanel layout="none">                                            
+                    <apex:commandButton value="Save" action="{!save}"/>
+                    <apex:commandButton value="Cancel" action="{!cancel}"/>                    
+               </apex:outputPanel>
+           </apex:pageBlockButtons>                 
+
+               <c:Create_Delivery_Schedule pageController="{!this}" />
+             
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

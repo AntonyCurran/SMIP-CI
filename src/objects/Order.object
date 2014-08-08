@@ -26,7 +26,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
-        <type>Default</type>
+        <content>OrderFormEdit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Follow</actionName>
@@ -38,7 +40,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>OrderForm</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>NewReduction</actionName>
@@ -58,7 +62,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <content>OrderFormView</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
@@ -106,7 +112,7 @@
     <fields>
         <fullName>Month__c</fullName>
         <externalId>false</externalId>
-        <formula>CASE(MONTH( DateValue(now()) ), 
+        <formula>CASE(MONTH( DateValue(CreatedDate) ), 
 1, &quot;January&quot;, 
 2, &quot;February&quot;, 
 3, &quot;March&quot;, 
@@ -128,21 +134,24 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Opportunity__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <description>Related Opportunity</description>
-        <externalId>false</externalId>
-        <label>Opportunity</label>
-        <referenceTo>Opportunity</referenceTo>
-        <relationshipLabel>Orders</relationshipLabel>
-        <relationshipName>Orders</relationshipName>
-        <required>false</required>
+        <fullName>OpportunityId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OriginalOrderId</fullName>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parent_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>Parent ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
     </fields>
     <fields>
         <fullName>Region__c</fullName>
@@ -171,11 +180,23 @@
         <fullName>Status</fullName>
         <picklist>
             <picklistValues>
-                <fullName>Draft</fullName>
+                <fullName>Created</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Activated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
                 <default>false</default>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
@@ -199,7 +220,7 @@
     <fields>
         <fullName>Year__c</fullName>
         <externalId>false</externalId>
-        <formula>Text( Year(DateValue(now())) )</formula>
+        <formula>Text( Year(DateValue(CreatedDate)) )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Year</label>
         <required>false</required>
@@ -216,6 +237,9 @@
             <value>A</value>
         </filters>
         <label>All Activated Orders</label>
+        <sharedTo>
+            <group>DevAdminGroup</group>
+        </sharedTo>
     </listViews>
     <listViews>
         <fullName>AllDraftOrders</fullName>
@@ -226,6 +250,9 @@
             <value>D</value>
         </filters>
         <label>All Draft Orders</label>
+        <sharedTo>
+            <group>DevAdminGroup</group>
+        </sharedTo>
     </listViews>
     <listViews>
         <fullName>AllOrders</fullName>
@@ -233,8 +260,52 @@
         <columns>ORDERS.STATUS</columns>
         <columns>Month__c</columns>
         <columns>ORDERS.LAST_UPDATE</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <label>All Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>Auxiliary_Equipment_Orders</fullName>
+        <columns>ORDERS.ORDER_NUMBER</columns>
+        <columns>ORDERS.STATUS</columns>
+        <columns>Month__c</columns>
+        <columns>ORDERS.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ORDER.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order.Auxiliary_Equipment_Order</value>
+        </filters>
+        <label>Auxiliary Equipment Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>Catalog_Item_Order</fullName>
+        <columns>ORDERS.ORDER_NUMBER</columns>
+        <columns>ORDERS.STATUS</columns>
+        <columns>Month__c</columns>
+        <columns>ORDERS.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ORDER.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order.Catalogue_Item_Order</value>
+        </filters>
+        <label>Catalog Item Order</label>
+    </listViews>
+    <listViews>
+        <fullName>Communication_Hub_Orders</fullName>
+        <columns>ORDERS.ORDER_NUMBER</columns>
+        <columns>ORDERS.STATUS</columns>
+        <columns>Month__c</columns>
+        <columns>Year__c</columns>
+        <columns>ORDERS.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ORDER.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order.Communication_Hub_Order</value>
+        </filters>
+        <label>Communication Hub Orders</label>
     </listViews>
     <listViews>
         <fullName>Energy_Supplier_Orders</fullName>
@@ -244,6 +315,9 @@
         <columns>ORDERS.LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <label>Energy Supplier Orders</label>
+        <sharedTo>
+            <group>DevAdminGroup</group>
+        </sharedTo>
     </listViews>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
@@ -268,7 +342,19 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Draft</fullName>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Created</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -302,7 +388,19 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Draft</fullName>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Created</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -315,10 +413,10 @@
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>Communication_Hub_Orders</fullName>
+        <fullName>Communication_Hub_Order</fullName>
         <active>true</active>
         <description>Order type of Communication Hub</description>
-        <label>Communication Hub Orders</label>
+        <label>Communication Hub Order</label>
         <picklistValues>
             <picklist>Region__c</picklist>
             <values>
@@ -337,7 +435,19 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Draft</fullName>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Created</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -352,6 +462,7 @@
     <searchLayouts>
         <customTabListAdditionalFields>ORDERS.ORDER_NUMBER</customTabListAdditionalFields>
         <customTabListAdditionalFields>SALES.ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Region__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>ORDERS.STATUS</customTabListAdditionalFields>
         <customTabListAdditionalFields>ORDERS.TOTAL_AMOUNT</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>ORDERS.ORDER_NUMBER</lookupDialogsAdditionalFields>
@@ -366,5 +477,11 @@
         <errorConditionFormula>ISPICKVAL(Type, &quot;Consignment&quot;)  &amp;&amp; ISNULL(Delivery_Schedule__c)</errorConditionFormula>
         <errorDisplayField>Delivery_Schedule__c</errorDisplayField>
         <errorMessage>A consignment must belong to a delivery schedule</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateOrderStatusForEdit</fullName>
+        <active>true</active>
+        <errorConditionFormula>if(PRIORVALUE(Status)==&apos;Submitted&apos; &amp;&amp;  ISPICKVAL(Status, &apos;Submitted&apos;), true, false)</errorConditionFormula>
+        <errorMessage>Submitted records couldn&apos;t be edited</errorMessage>
     </validationRules>
 </CustomObject>

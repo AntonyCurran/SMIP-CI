@@ -1,0 +1,34 @@
+<apex:component controller="DeliverySchedulerComponentController">
+    <apex:attribute name="pageController"
+    type="AbstractParentController"
+        assignTo="{!parentController}"
+        required="true"
+        description="The controller for the page." />
+        
+   <apex:pageMessages />
+           <apex:PageBlock >
+               <apex:pageBlockSection title="Delivery Schedule">
+                    
+                   <apex:inputField value="{!wrapper.deliverySchedule.Account__c}"/>
+                   <apex:inputField value="{!wrapper.deliverySchedule.Region__c}"/>                  
+                   <apex:inputField label="Delivery Month" value="{!wrapper.deliverySchedule.Month__c}"/>
+                   <apex:inputField value="{!wrapper.deliverySchedule.Year__c}"/>    
+                   <!--<apex:commandButton value="check" action="{!checkValues}" /> -->
+               </apex:pageBlockSection>
+               
+               <apex:repeat value="{!wrapper.consignments}" var="consignment"> 
+                   <apex:pageBlockSection title="Consignment {!consignment.Position__c}">
+                       <apex:inputField value="{!consignment.Due__c}"/>
+                       <apex:inputField value="{!consignment.Delivery_Location__c}"/>        
+                       <apex:inputField value="{!consignment.Instructions__c}"/>        
+                       <apex:outputField value="{!consignment.Status__c}"/>        
+                       <apex:pageBlockSection title="Items">
+                          <apex:repeat value="{!wrapper.items[consignment.Position__c]}" var="item">
+                               <apex:outputField value="{!item.Product__c}"/>
+                               <apex:inputField value="{!item.Quantity__c}"/>                  
+                           </apex:repeat>
+                        </apex:pageBlockSection>
+                   </apex:pageBlockSection>
+               </apex:repeat>
+           </apex:PageBlock>
+</apex:component>

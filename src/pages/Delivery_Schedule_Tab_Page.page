@@ -1,0 +1,15 @@
+<apex:page standardController="Delivery_Schedule__c" extensions="DeliveryScheduleTabExtnController" recordSetVar="schedules" sidebar="true">
+   <apex:pageBlock >
+    <apex:pageBlockTable value="{!schedules}" var="schedule">
+     
+       <apex:column headerValue="Name">
+                        <apex:outputLink value="/{!schedule.Id}">{!schedule.Name}</apex:outputLink>
+       </apex:column>
+       
+       <apex:column headerValue="Account" value="{!schedule.Account__c}"/>
+       <apex:column headerValue="Region" value="{!schedule.Region__c}"/>
+       <apex:column headerValue="Year" value="{!schedule.Year__c}"/>
+       <apex:column headerValue="Month" value="{!schedule.Month__c}"/>
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+</apex:page>

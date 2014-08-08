@@ -1,0 +1,18 @@
+<apex:page standardController="Delivery_Schedule__c" extensions="ViewDeliveryScheduleExtension">
+   <apex:pageBlock title="View Delivery Schedule">
+       <apex:form >
+           <apex:pageMessages />
+           <apex:PageBlock >
+               <apex:pageBlockButtons title="Actions">
+                   <apex:commandButton value="Edit" action="{!edit}"/>
+                   <apex:commandButton value="View Order" action="{!viewOrder}"/>
+               </apex:pageBlockButtons>
+               <c:View_Delivery_Schedule_Component pageController="{!this}" />
+             
+             
+             
+             
+           </apex:PageBlock>
+       </apex:form>
+   </apex:pageBlock>
+</apex:page>

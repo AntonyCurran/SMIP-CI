@@ -1,0 +1,76 @@
+<apex:page standardController="Order" extensions="OrderFormController" standardStylesheets="true" title="New Order">
+     <head>
+        <title>Order Form</title>
+      </head>
+    <p></p>
+      
+    <script type="text/javascript">
+    function confirmDelSch(){
+        var conf=confirm("Order will be saved. Press 'OK' to continue with Delivery booking");
+        window.alert(conf);
+        return conf;    
+    }
+    </script>
+    
+   <apex:sectionHeader title="New Order" subtitle="{!RectypeName}"/>
+   <apex:form >
+        <apex:pageBlock mode="edit" id="orderBlock">
+          <apex:pageMessages id="msgPanel" />
+           <apex:pageBlockButtons >
+               <apex:outputPanel layout="none">    
+                    <apex:commandButton value="Save" action="{!recsave}" onclick="disablebutton"/>
+                    <apex:commandButton value="Cancel" action="{!cancel}"/>                  
+               </apex:outputPanel>
+           </apex:pageBlockButtons>  
+ 
+           <apex:pageBlockSection title="Order Detail" id="ordDetail" columns="2">
+                <apex:pageBlockSectionItem />
+                <apex:pageBlockSectionItem />
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Account Name" for="accName"></apex:outputLabel>
+                       <apex:outputPanel layout="block" styleclass="requiredInput">
+                       <div class="requiredBlock"></div> 
+                       <apex:inputField value="{!Order_rec.AccountId}" id="accName" required="true"/>                            
+                    </apex:outputPanel>                     
+                </apex:pageBlockSectionItem> 
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Order Month" for="OrdEffDt"></apex:outputLabel>
+                    <apex:outputPanel layout="block" styleclass="requiredInput">
+                        <div class="requiredBlock"></div> 
+                        <apex:inputField value="{!Order_rec.EffectiveDate}" id="OrdEffDt" required="true"/>                            
+                    </apex:outputPanel>                     
+                 </apex:pageBlockSectionItem>          
+          
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Region" for="Region"></apex:outputLabel>
+                     <apex:outputPanel layout="block" styleclass="requiredInput">
+                            <div class="requiredBlock"></div> 
+                    <apex:inputField value="{!Order_rec.Region__c}" id="Region" required="true"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem> 
+                
+                <apex:pageBlockSectionItem />
+                <apex:pageBlockSectionItem />
+            </apex:pageBlockSection>
+         
+            <apex:pageBlockSection title="Select Products" id="prdDetail" columns="1">
+               <apex:pageBlockTable value="{!OIS}" var="prod" rendered="{!NOT(ISNULL(OIS))}" columnsWidth="10%,70%,20%">
+                    <apex:column value="{!prod.PC}" headerValue="Product Code" id="prdCode"/> 
+                    <apex:column value="{!prod.Name}" headerValue="Product Name"/>
+                    <apex:column headerValue="Quantity">
+                        <apex:inputField value="{!prod.OrdItem.Quantity}" id="ordQty" />
+                    </apex:column>                  
+               </apex:pageBlockTable>
+            </apex:pageBlockSection>
+
+             <apex:pageBlockSection title="Delivery Schedule"  id="delSch" columns="1">
+               <c:Create_Delivery_Schedule pageController="{!this}" />
+              
+            </apex:pageBlockSection>
+           
+                    
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

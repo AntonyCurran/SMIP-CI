@@ -1,0 +1,22 @@
+<apex:page StandardController="Forecast_Header__c" extensions="EnergySupplierForecastList"  tabStyle="Forecast_Header__c" id="fcstHdrPg">
+    <apex:form id="lFrm">
+        <apex:pageBlock title="List {!accountName} Forecasts" id="lPgBlck">
+        <apex:pageMessages id="lPgMsg" />
+            <apex:pageBlockTable value="{!forecastHeader}" var="fh" id="lPgTbl">
+                <apex:column headerValue="Action" id="cl1">
+                    <apex:commandLink action="{!view}" value="View" id="cmd1">
+                        <apex:param name="forcastHeaderId" value="{!fh.Id}" assignTo="{!forecastHeaderId}"/>
+                    </apex:commandLink>
+                </apex:column>  
+                <apex:column value="{!fh.Account__c}" rendered="{!accountName == 'All Energy Supplier'}" id="cl2"/>
+                <apex:column value="{!fh.Name}" id="cl3"/>
+                <apex:column value="{!fh.Status__c}" id="cl4"/>
+                <apex:column value="{!fh.Forecast_Month__c}" id="cl5"/>
+                <apex:column value="{!fh.LastModifiedDate}" id="cl6"/>
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons location="both" id="btnBlck1">
+                <apex:commandButton value="New Forecast" action="{!createNewForecast}" id="cmdBtn1"/>
+            </apex:pageBlockButtons> 
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

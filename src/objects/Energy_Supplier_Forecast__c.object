@@ -30,7 +30,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>CreateForecast</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>SaveEdit</actionName>
@@ -73,6 +75,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_10__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 10</label>
         <precision>18</precision>
@@ -84,6 +87,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_11__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 11</label>
         <precision>18</precision>
@@ -95,6 +99,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_12__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 12</label>
         <precision>18</precision>
@@ -106,6 +111,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_13__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 13</label>
         <precision>18</precision>
@@ -117,6 +123,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_14__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 14</label>
         <precision>18</precision>
@@ -128,6 +135,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_15__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 15</label>
         <precision>18</precision>
@@ -139,6 +147,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_16__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 16</label>
         <precision>18</precision>
@@ -150,6 +159,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_17__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 17</label>
         <precision>18</precision>
@@ -161,6 +171,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_18__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 18</label>
         <precision>18</precision>
@@ -172,6 +183,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_19__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 19</label>
         <precision>18</precision>
@@ -183,6 +195,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_1__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 1</label>
         <precision>18</precision>
@@ -194,6 +207,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_20__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 20</label>
         <precision>18</precision>
@@ -205,6 +219,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_21__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 21</label>
         <precision>18</precision>
@@ -216,6 +231,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_22__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 22</label>
         <precision>18</precision>
@@ -227,6 +243,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_23__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 23</label>
         <precision>18</precision>
@@ -238,6 +255,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_24__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 24</label>
         <precision>18</precision>
@@ -249,6 +267,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_2__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 2</label>
         <precision>18</precision>
@@ -260,6 +279,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_3__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 3</label>
         <precision>18</precision>
@@ -271,6 +291,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_4__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 4</label>
         <precision>18</precision>
@@ -282,6 +303,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_5__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 5</label>
         <precision>18</precision>
@@ -293,6 +315,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_6__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 6</label>
         <precision>18</precision>
@@ -304,6 +327,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_7__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 7</label>
         <precision>18</precision>
@@ -315,6 +339,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_8__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 8</label>
         <precision>18</precision>
@@ -326,6 +351,7 @@
     </fields>
     <fields>
         <fullName>Current_Month_9__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Current_Month 9</label>
         <precision>18</precision>
@@ -337,14 +363,26 @@
     </fields>
     <fields>
         <fullName>Energy_Supplier__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
+        <deleteConstraint>SetNull</deleteConstraint>
         <description>lookup to Account object of Energy Supplier</description>
         <externalId>false</externalId>
         <label>Energy Supplier</label>
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Energy Supplier Forecast</relationshipLabel>
+        <relationshipName>Energy_Supplier_Forecast_del</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Forecast_Header__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Forecast Header</label>
+        <referenceTo>Forecast_Header__c</referenceTo>
+        <relationshipLabel>Energy Supplier Forecast</relationshipLabel>
         <relationshipName>Energy_Supplier_Forecast</relationshipName>
-        <required>true</required>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -357,7 +395,248 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Month_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 10</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_11__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 11</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_12__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 12</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_13__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 13</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_14__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 14</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_15__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 15</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_16__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 16</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_17__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 17</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_18__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 18</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_19__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 19</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_20__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 20</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_21__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 21</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_22__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 22</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_23__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 23</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_24__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 24</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_9__c</fullName>
+        <externalId>false</externalId>
+        <label>Month 9</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Previous_Month_10__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 10</label>
         <precision>18</precision>
@@ -369,6 +648,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_11__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 11</label>
         <precision>18</precision>
@@ -380,6 +660,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_12__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 12</label>
         <precision>18</precision>
@@ -391,6 +672,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_13__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 13</label>
         <precision>18</precision>
@@ -402,6 +684,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_14__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 14</label>
         <precision>18</precision>
@@ -413,6 +696,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_15__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 15</label>
         <precision>18</precision>
@@ -424,6 +708,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_16__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 16</label>
         <precision>18</precision>
@@ -435,6 +720,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_17__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 17</label>
         <precision>18</precision>
@@ -446,6 +732,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_18__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 18</label>
         <precision>18</precision>
@@ -457,6 +744,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_19__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 19</label>
         <precision>18</precision>
@@ -468,6 +756,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_1__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 1</label>
         <precision>18</precision>
@@ -479,6 +768,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_20__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 20</label>
         <precision>18</precision>
@@ -490,6 +780,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_21__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 21</label>
         <precision>18</precision>
@@ -501,6 +792,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_22__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 22</label>
         <precision>18</precision>
@@ -512,6 +804,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_23__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 23</label>
         <precision>18</precision>
@@ -523,6 +816,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_24__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 24</label>
         <precision>18</precision>
@@ -534,6 +828,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_2__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 2</label>
         <precision>18</precision>
@@ -545,6 +840,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_3__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 3</label>
         <precision>18</precision>
@@ -556,6 +852,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_4__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 4</label>
         <precision>18</precision>
@@ -567,6 +864,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_5__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 5</label>
         <precision>18</precision>
@@ -578,6 +876,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_6__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 6</label>
         <precision>18</precision>
@@ -589,6 +888,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_7__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 7</label>
         <precision>18</precision>
@@ -600,6 +900,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_8__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 8</label>
         <precision>18</precision>
@@ -611,6 +912,7 @@
     </fields>
     <fields>
         <fullName>Previous_Month_9__c</fullName>
+        <defaultValue>000</defaultValue>
         <externalId>false</externalId>
         <label>Previous_Month 9</label>
         <precision>18</precision>
@@ -620,41 +922,26 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <defaultValue>&quot;new&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Energy Supplier Forecast</label>
-    <listViews>
-        <fullName>All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
-    <listViews>
-        <fullName>Scottish_Power_Forecast</fullName>
-        <columns>Energy_Supplier__c</columns>
-        <columns>NAME</columns>
-        <columns>Comm_Hub_Variant__c</columns>
-        <columns>Current_Month_1__c</columns>
-        <columns>Current_Month_2__c</columns>
-        <columns>Current_Month_3__c</columns>
-        <columns>Current_Month_4__c</columns>
-        <columns>Current_Month_5__c</columns>
-        <columns>Current_Month_6__c</columns>
-        <columns>Current_Month_7__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Energy_Supplier__c</field>
-            <operation>equals</operation>
-            <value>Scottish Power</value>
-        </filters>
-        <label>Scottish Power Forecast</label>
-        <sharedTo>
-            <group>Scottish_Power</group>
-        </sharedTo>
-    </listViews>
     <nameField>
         <displayFormat>ESF-{00000}</displayFormat>
         <label>Energy Supplier Forecast Name</label>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Energy Supplier Forecast</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Current_Month_1__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
 </CustomObject>

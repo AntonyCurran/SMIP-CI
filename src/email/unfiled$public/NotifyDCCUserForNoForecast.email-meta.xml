@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>send an email notification for DCC user in last week of the month if not submitted the forecast for that month.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>NotifyDCCUserForNoForecast</name>
+    <style>none</style>
+    <subject>Forecast for the month {!NullValue(User.Kmonth__c, &quot;current&quot;)} has not been submitted</subject>
+    <type>text</type>
+</EmailTemplate>

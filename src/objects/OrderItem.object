@@ -35,6 +35,17 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>IsRecDeleted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checkbox to confirm if the line item is applicable to the order.
+True -&gt; Checked -&gt; Record is not applicable for the order. It can be assumed as deleted record
+False -&gt; UnChecked -&gt; Record is applicable for the order. It can be assumed as non-deleted record</description>
+        <externalId>false</externalId>
+        <label>IsRecDeleted</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>OrderId</fullName>
         <type>Lookup</type>
     </fields>

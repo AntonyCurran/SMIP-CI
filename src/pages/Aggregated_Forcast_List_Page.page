@@ -1,0 +1,34 @@
+<apex:page standardController="Aggregated_Forecast__c" extensions="AggregatedForecastExtnController" recordSetVar="schedules" sidebar="true" id="AggregatedForecastPage">
+   
+   <apex:form >
+   <apex:pageBlock >
+   <style>
+    .headerClassStyle{
+        text-align:center;
+    }
+    .ct{
+        text-align:center;
+    }
+</style>
+     <apex:dynamicComponent componentValue="{!dynamicSectionHeaderForForecastMonth}" id="DynamicSection"/>
+     
+  
+    <apex:pageBlockTable value="{!aggForecastWrapper.aggregatedList}" var="element" id="Table">
+     
+       <apex:column headerValue="" styleClass="ct" id="LinkHeader">
+                        <apex:commandlink action="{!openAggregatedForecastPage}" value="View Details" >
+                           <apex:param name="Set Selected Row Index" value="{!element.rowIndex}" assignTo="{!aggForecastWrapper.selectedRowIndex}"/>
+                         
+                        </apex:commandlink>
+       </apex:column>
+         
+       <apex:column headerValue="Forecast Month"     styleClass="ct" headerClass="headerClassStyle" value="{!element.forecastMonthDisplayValue}" id="ForecastMonth"/>
+       
+       <apex:column headerValue="Forecast Year"      styleClass="ct" headerClass="headerClassStyle" value="{!element.forecastYearDisplayValue}" id="ForecastYear"/>
+       
+       <apex:column headerValue="Last Modified Date" styleClass="ct" headerClass="headerClassStyle" value="{!element.lastModifiedDate}" id="LastModifiedDate"/> 
+      
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

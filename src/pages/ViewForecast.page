@@ -1,0 +1,289 @@
+<apex:page StandardController="Forecast_Header__c" Extensions="ViewEnergySupplierForecast"  sidebar="false" tabStyle="Forecast_Header__c" id="viewForecastPage">
+   <apex:form style="Width:49%" id="viewForecastForm">
+        <apex:pageBlock id="viewForecastblockA" Title="View Forecast"  >
+            <apex:pageMessages id="viewForecastPageMessage"/>
+            
+            <div style="overflow:auto; width:100%; height:100%" id ="viewForecastOverflowDivider" >       
+            <apex:pageBlockTable value="{!supplierForecast}" var="sf" id="viewForecastblockTableA" align="center">
+                <apex:column width="100px" headerValue="Hub Variant" id="HubVariantColumn" Value="{!sf.Comm_Hub_Variant__c}" />
+                <apex:column >
+                    <apex:panelGrid >
+                        <apex:outputText value="Previous" id="PreviousText"/>
+                        <apex:outputText value="Current" id="CurrentText"/>    
+                    </apex:panelGrid>
+                </apex:column> 
+                <apex:column headerValue="{!monthDisplay.Month_1__c}" id="month1Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month1PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_1__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}">
+                            <apex:param value="{!sf.Current_Month_1__c}" id="month1CurrentVal"/>
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column> 
+                 
+                <apex:column headerValue="{!monthDisplay.Month_2__c}" id="month2Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month2PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_2__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month2CurrentVal">
+                            <apex:param value="{!sf.Current_Month_2__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>  
+                
+                <apex:column headerValue="{!monthDisplay.Month_3__c}" id="month3Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month3PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_3__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month3CurrentVal">
+                            <apex:param value="{!sf.Current_Month_3__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>  
+                
+                <apex:column headerValue="{!monthDisplay.Month_4__c}" id="month4Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month4PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_4__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month4CurrentVal">
+                            <apex:param value="{!sf.Current_Month_4__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_5__c}" id="month5Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month5PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_5__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month5CurrentVal">
+                            <apex:param value="{!sf.Current_Month_5__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>  
+                
+                <apex:column headerValue="{!monthDisplay.Month_6__c}" id="month6Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month6PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_6__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month6CurrentVal">
+                            <apex:param value="{!sf.Current_Month_6__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_7__c}" id="month7Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month7PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_7__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month7CurrentVal">
+                            <apex:param value="{!sf.Current_Month_7__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_8__c}" id="month8Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month8PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_8__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month8CurrentVal">
+                            <apex:param value="{!sf.Current_Month_8__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                   
+                <apex:column headerValue="{!monthDisplay.Month_9__c}" id="month9Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month9PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_9__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month9CurrentVal">
+                            <apex:param value="{!sf.Current_Month_9__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_10__c}" id="month10Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month10PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_10__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month10CurrentVal">
+                            <apex:param value="{!sf.Current_Month_10__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_11__c}" id="month11Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month11PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_11__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month11CurrentVal">
+                            <apex:param value="{!sf.Current_Month_11__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_12__c}" id="month12Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month12PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_12__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month12CurrentVal">
+                            <apex:param value="{!sf.Current_Month_12__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_13__c}" id="month13Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month13PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_13__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month13CurrentVal">
+                            <apex:param value="{!sf.Current_Month_13__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_14__c}" id="month14Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month14PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_14__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month14CurrentVal">
+                            <apex:param value="{!sf.Current_Month_14__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_15__c}" id="month15Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month15PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_15__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month15CurrentVal">
+                            <apex:param value="{!sf.Current_Month_15__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_16__c}" id="month16Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month16PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_16__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month16CurrentVal">
+                            <apex:param value="{!sf.Current_Month_16__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_17__c}" id="month17Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month17PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_17__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month17CurrentVal">
+                            <apex:param value="{!sf.Current_Month_17__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_18__c}" id="month18Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month18PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_18__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month18CurrentVal">
+                            <apex:param value="{!sf.Current_Month_18__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_19__c}" id="month19Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month19PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_19__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month19CurrentVal">
+                            <apex:param value="{!sf.Current_Month_19__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_20__c}" id="month20Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month20PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_20__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month20CurrentVal">
+                            <apex:param value="{!sf.Current_Month_20__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_21__c}" id="month21Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month21PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_21__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month21CurrentVal">
+                            <apex:param value="{!sf.Current_Month_21__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_22__c}" id="month22Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month22PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_22__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month22CurrentVal">
+                            <apex:param value="{!sf.Current_Month_22__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_23__c}" id="month23Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month23PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_23__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month23CurrentVal">
+                            <apex:param value="{!sf.Current_Month_23__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+                <apex:column headerValue="{!monthDisplay.Month_24__c}" id="month24Column">
+                    <apex:panelGrid width="95px">
+                        <apex:outputText value="{0, number,###,###,##0}" id="month24PreviousVal">
+                            <apex:param value="{!sf.Previous_Month_24__c}" />
+                         </apex:outputText>
+                         <apex:outputText value="{0, number,###,###,##0}" id="month24CurrentVal">
+                            <apex:param value="{!sf.Current_Month_24__c}" />
+                         </apex:outputText>
+                    </apex:panelGrid>
+                </apex:column>
+                
+            </apex:pageBlockTable>
+            </div>
+                 
+            <apex:pageBlockButtons location="both" id="commandButtons">
+                <apex:commandButton value="Cancel" action="{!Cancel}" id="cancelButton" />
+                <apex:commandButton value="Submit" action="{!Submit}" disabled="{!buttonDisabled}" id="submitButton"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

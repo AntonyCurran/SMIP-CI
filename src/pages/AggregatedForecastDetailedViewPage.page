@@ -1,0 +1,35 @@
+<apex:page standardController="Aggregated_Forecast__c" extensions="AggregatedForecastDetailController" recordSetVar="schedules" sidebar="true">
+   
+   <apex:form >
+   <apex:pageBlock >
+   <style>
+     .headerClassStyle{
+        text-align:center;
+    }
+   
+    .ct{
+        text-align:center;
+    }
+</style>
+    <apex:dynamicComponent componentValue="{!dynamicComponentWithForecastMonth}"/>
+     <apex:pageBlockSection columns="1" title="Enery Supplier Forecast Submission Report : " id="energySupplierForecastDetails">
+    <apex:pageBlockTable value="{!aggregateDetailForecastWrapper.engerySupplierSubmittedNotSubmittedList}" var="element" id="Table">
+    
+       <apex:column headerValue="Account"      styleClass="ct" headerClass="headerClassStyle" value="{!element.energySupplierAccountDisplayValue}" id="Account"/>
+       
+       
+       <apex:column headerValue="Region"      styleClass="ct" headerClass="headerClassStyle" value="{!element.energySupplierRegionDisplayValue}" id="Region"/>
+      
+      
+       <apex:column headerValue="Forecast Month"     styleClass="ct" headerClass="headerClassStyle" value="{!element.forecastMonthYear}" id="ForecastMonth"/>
+        
+       <apex:column headerValue="Forecast Submitted Status" styleClass="ct" headerClass="headerClassStyle" value="{!element.submittedForecastDisplayValue}" id="SubmittedForecast"/> 
+      
+          
+    </apex:pageBlockTable>
+     </apex:pageBlockSection>
+       <apex:pageBlockSection columns="1" title="Quantity Summary Report : " id="quantitySummaryReport">
+       </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>
